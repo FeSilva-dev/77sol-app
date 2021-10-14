@@ -1,3 +1,32 @@
-.paragrafo{
-  color: red;
+.home{
+  width: 100%;
+  height: calc(100vh - 6rem);
+  background-color: #f7f7fc;
+
+  .homeContent{
+    max-width: 1400px;
+    margin: 0 auto;
+    padding-top: 3rem;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    h1{
+      max-width: 350px;
+      color: #0431C7;
+      font-size: 2rem;
+    }
+
+    .formAction{
+      p{
+        max-width: 450px;
+        margin-top: 1rem;
+        font-size: 1.2rem;
+  
+        &:last-child{
+          font-size: 1rem;
+        }
+      }
+    }
+  }
 }
