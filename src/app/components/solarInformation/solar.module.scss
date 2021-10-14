@@ -1,0 +1,106 @@
+.solarContent{
+  
+  .solarTitle{
+    margin-top: 1rem;
+
+    h3{
+      width: 250px;
+      margin-top: 1rem;
+      border: 1px solid #0431C7;
+      text-align: center;
+      padding: 10px 12px;
+      border-radius: 8px;
+    }
+
+    @media (max-width: 1024px) {
+
+      h2{
+        width: 300px;
+      }
+      h3{
+        width: 400px;
+      }
+    }
+  }
+
+  .solarIntegrators{
+    margin-top: 1rem;
+
+    .quantityIntegrators{
+      margin-top: .5rem;
+      width: 50%;
+      text-align: center;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .solarKits{
+    margin-top: 1rem;
+
+    .solarKit{
+      margin-top: 1rem;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      width: 70%;
+      height: 50vh;
+      overflow: auto;
+
+      img{
+        width: 200px;
+        height: 150px;
+      }
+
+      .kit{
+        margin-bottom: 1rem;
+      }
+
+      @media (max-width: 1024px) {
+        padding: 0 10px;
+        width: 100%;
+        height: auto;
+        overflow: auto;
+      }
+    }
+  }
+
+  .solarInstallment{
+    margin: 1rem 0;
+
+    .installments{
+      margin-top: .5rem;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      width: 70%;
+      height: 25vh;
+      overflow: auto;
+      gap: 20px;
+
+      .installment{
+        border: 1px solid #0431C7;
+        border-radius: 8px;
+        padding: 5px;
+        text-align: center;
+      }
+
+      @media (max-width: 1024px) {
+        padding: 0 10px;
+        width: 100%;
+        height: auto;
+        overflow: auto;
+      }
+    }
+  }
+
+  .instalationValue{
+    margin-top: 1rem;
+
+    h2{
+      width: 450px;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    padding: 0 10px;
+  }
+}

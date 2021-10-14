@@ -9,8 +9,8 @@ export interface ConsultInformationResult {
   irradiancia_minima: number;
   potencial: string;
   valor_instalacao: number;
-  insalt: Installments[];
-  kits: Kit[];
+  parcelamento: Installments[];
+  kit: Kit[];
 };
 
 export interface Installments {
@@ -31,4 +31,5 @@ export interface Kit {
   titulo: string;
   url: string;
   valor: number;
+  potenciaInversor: string;
 };

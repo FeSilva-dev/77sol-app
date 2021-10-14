@@ -1,3 +1,29 @@
+.overflow{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  .spiner{
+    border: 8px solid rgba(0, 0, 0, 0.3);
+    border-left-color: #0431C7;
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+  }
+}
+
 .home{
   width: 100%;
   height: calc(100% - 6rem);

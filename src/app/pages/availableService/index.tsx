@@ -1,11 +1,20 @@
+import { useFormService } from '../../../hooks/useFormService';
 import { FormConsultSerivce } from '../../components/formConsultService';
 import { Header } from '../../components/header';
+import { SolarInformation } from '../../components/solarInformation';
 import styles from './available.module.scss';
 
 export function AvailableServices(){
 
+  const { resultConsultSunModule, hasConsultResult, isLoadingInfo } = useFormService();
+
   return(
     <>
+      {isLoadingInfo && (
+        <div className={styles.overflow}>
+          <div className={styles.spiner}></div>
+        </div>
+      )}
       <Header />
       <section className={styles.home}>
         <section className={styles.homeContent}>
@@ -21,7 +30,14 @@ export function AvailableServices(){
           </div>
 
           <div className={styles.resultServices}>
-            <h1>Aqui está o resultado da sua consulta</h1>
+            {hasConsultResult ? (
+              <>
+                <h1>Aqui está o resultado da sua consulta</h1>
+                <SolarInformation resultSolarInfo={resultConsultSunModule}/>
+              </>
+            ) : (
+              <h1>Faça uma simulação para obter as melhores condições</h1>
+            )}
           </div>
         </section>
       </section>

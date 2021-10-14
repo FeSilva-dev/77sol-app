@@ -4,7 +4,9 @@ import { ConsultInformationResult } from '../types/SunModule';
 
 interface FormServiceContextData {
   consultAvailableService: (energyInformation: FormServiceInput) => Promise<void>;
-  resultConsultSunModule: ConsultInformationResult[];
+  resultConsultSunModule: ConsultInformationResult;
+  hasConsultResult: boolean;
+  isLoadingInfo: boolean;
 };
 
 interface FormServiceInput {
@@ -22,14 +24,21 @@ const FormServiceContext = createContext<FormServiceContextData>(
 );
 
 export function FormServiceProvider({children}: FormServiceProviderProps){
-  const [resultConsultSunModule, setResultConsultSunModule] = useState([]);
+  const [resultConsultSunModule, setResultConsultSunModule] = useState<any>({});
+  const [hasConsultResult, setHasConsultResult] = useState(false);
+  const [isLoadingInfo, setIsLoadingInfo] = useState(false);
 
   async function consultAvailableService(energyInformation: FormServiceInput){
     const { energyValue, structureType, zipCode } = energyInformation;
+    setResultConsultSunModule([]);
+    setHasConsultResult(false);
+    setIsLoadingInfo(true);
 
     try{
       const response: any = await RoutesSerices.getAvailableServices(structureType, energyValue, zipCode);
-      setResultConsultSunModule(response)
+      setResultConsultSunModule(response.data);
+      setHasConsultResult(true);
+      setIsLoadingInfo(false);
       
     }catch(error){
       alert("Failed to get information");
@@ -40,7 +49,9 @@ export function FormServiceProvider({children}: FormServiceProviderProps){
     <FormServiceContext.Provider 
       value={{
         consultAvailableService,
-        resultConsultSunModule
+        resultConsultSunModule,
+        hasConsultResult,
+        isLoadingInfo
       }}
     >
       {children}
