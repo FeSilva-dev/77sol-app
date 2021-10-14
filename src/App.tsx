@@ -1,8 +1,11 @@
+import { FormServiceProvider } from "./hooks/useFormService";
 import { Routes } from "./routes";
 
 function App() {
   return (
-    <Routes />
+    <FormServiceProvider>
+      <Routes />
+    </FormServiceProvider>
   );
 }
 
