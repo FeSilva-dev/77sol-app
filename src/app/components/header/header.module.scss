@@ -1,0 +1,18 @@
+header{
+  background-color: #fff;
+
+  .content{
+    max-width: 1400px;
+    margin: 0 auto;
+
+    height: 6rem;
+    padding: 0 2rem;
+
+    display: flex;
+    align-items: center;
+
+    img{
+      max-width: 100px;
+    }
+  }
+}
