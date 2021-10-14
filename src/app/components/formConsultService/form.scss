@@ -1,0 +1,79 @@
+.formService{
+  .formGroup{
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+
+    input{
+      padding: 8px 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      width: 250px;
+      font-size: 1rem;
+      outline-color: #03AB5F;
+    }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+    }
+
+    span{
+      font-size: 0.8rem;
+    }
+  }
+
+  .structureOptions{
+    margin-top: 2rem;
+    width: 50%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    .card{
+      width: 110px;
+      height: 80px;
+      
+      border: 1px solid #0431C7;
+      border-radius: 1rem;
+      font-size: 0.8rem;
+
+      cursor: pointer;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+
+      &.active{
+        color: white;
+        background: #0431C7;
+      }
+
+      &:hover{
+        color: white;
+        background: #0431C7;
+      }
+    }
+
+    @media(max-width: 1024px){
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .submitButton{
+    margin-top: 2rem;
+
+    button{
+      padding: 15px 20px;
+      color: white;
+      background: #0431C7;
+      border: 0;
+      border-radius: 10px;
+      transition: 0.2s;
+
+      &:hover{
+        filter: opacity(0.8);
+      }
+    }
+  }
+}
