@@ -10,7 +10,7 @@
 <img src="./.github/homeScreen.png" />
 
 ## :page_facing_up: Descrição
-O pokedex é usado para obter informações de qualquer pokemon, como nome, tipo, imagem. 
+O 77Sol é usado para simular o valor de uma instalação de placa solar de acordo com as informações fornecidas pelo usuário. 
 
 ## 🛠 Tecnologias
 Este projeto foi desenvolvido com as seguintes tecnologias
@@ -18,10 +18,8 @@ Este projeto foi desenvolvido com as seguintes tecnologias
 - [React.js](https://pt-br.reactjs.org/)
 
 ## :clipboard: Funcionalidades
-- [x] Adicionar um pokemon aos favoritos.
-- [x] Filtrar por nome ou número de pokemon.
-- [x] Filtrar por tipo.
-- [x] Filtrar por favorito.
+- [x] Fazer uma simulação de valores.
+- [x] Ler um arquivo com mais informações das placas.
 
 ### Pré-requisitos
 Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
@@ -32,10 +30,10 @@ Além disto é bom ter um editor para trabalhar com o código como [VSCode](http
 
 ```bash
 #Clone este repositório
-$ git clone https://github.com/FeSilva-dev/synvia-pokedex.git
+$ git clone https://github.com/FeSilva-dev/77sol-app.git
 
 # Vá para a pasta web
-$ cd synvia-pokedex
+$ cd 77sol-app
 
 # Instale as dependências
 $ yarn install
@@ -45,6 +43,3 @@ yarn start
 
 # O app vai está rodando na porta 3000 - acesse <http://localhost:3000>
 ```
-
-### 💻️ Link do Projeto
-Pokedex: https://synvia-pokedex.herokuapp.com/
