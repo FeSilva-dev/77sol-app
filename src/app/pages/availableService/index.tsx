@@ -17,7 +17,7 @@ export function AvailableServices(){
             </p>
 
             <p>Preencha os campos abaixo para fazer uma simulação gratuita</p>
-            {/* <FormConsultSerivce /> */}
+            <FormConsultSerivce />
           </div>
 
           <div className={styles.resultServices}>
